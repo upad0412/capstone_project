@@ -1,25 +1,23 @@
 # Capestone Project
 
-Analyze return dispatches of field force and their leading cause of returns for one of the largest telecom providers in US and find leading cause of returns which are a loss for the company!
+Developed a model for Field Technicians of largest US Telecom service provider to predict the probability of a job being returned at the time of assignment to ensure that the corrective actions are taken to avoid the return
 
 # Problem Statement
 
-1.	Analyze return dispatches of field force and their leading cause of returns for one of the telecom providers in US
-2.	Found leading cause of returns which are a loss for the company.
-
-Analyzing the dispatch field force data for one of the largest telecom providers in US. As we know telecom industry field service performance is unpredictable in nature. Why not we can try to predict model from some factors those may can define the cause of return dispatch of field force. 
+***	Analyze return dispatches of field force and their leading cause of the returns for one of the telecom providers in US
+ 
 
 FFE (Field Force Enablement) is a system that combines processes and services to support companies in locating field force, managing their activity, schedule and dispatch work and integrate with inventory, billing, accounting and other back office systems. This tool is most commonly used by the companies which need to manage installs, service or repairs of the systems or equipment.
 
 FFE plays a pivotal role in making sure that telecom operations run smoothly 24 hours a day 365 days a year. A singular error can affect millions of people not to mentions thousands of business that are ever reliant on telecommunication to run their operations on a daily basis.
 
-I got proprietary dispatch data from one of the telecom company which is used for academic purpose. I got 12 moths of 2019 service dispatch dataset as ‘.csv’ format. 
+I got a proprietary service dispatch data from one of the  telecom service  service provider which is used for academic purpose. I got 12 moths of 2019 service dispatch dataset as ‘.csv’ format. 
 
 
 ## Data Acquisition
 
 •	Service Dispatch data (proprietary data use for academic purposes)
-•	12 months of 2019 service dispatch data as .csv file
+
 Data can find below:
 [Data Gathering]('./Service_Dispatch_Jan2019.csv')
 [Data Gathering]('./Service_Dispatch_Jan2019.csv')
@@ -39,15 +37,15 @@ Data can find below:
 
 ## Data Cleaning
 
-Next I tried to clean all the data and labelling them, as most of the features are categorical. Data sets contain total 1658098 index with 244 features. Most of the feature’s values contain one value. I dropped all those features value as this will not impact to my model. It becomes 74 features. Then I checked missing or null values and I decided to drop all the null values as It did not lose valuable information in the data.
+Next I tried to clean all the data and labelling them, as most of the features are categorical. Data sets contain total 1658098 index with 244 features. Most of the features contain only one value. I dropped all those features value as this will not carry any information to my dataset. It becomes 74 features. Then I checked missing or null values and I decided to drop all the null values as my dataset will not lose any valuable information from this.
 
 ## Exploratory data Analysis:
 
-As all the data are categorical, try to find their distribution through interactive plot by ‘plotly.graph_objs’ library. Job type and location and location density and region name showing significant impact on the data. Finally, I took total 17 features on my final data set.
+As all the data are categorical, try to find their distribution through interactive plot by ‘plotly.graph_objs’ library. Job type and location and location density and region name showing significant impact on the data.
 
-Mostly all features are categorical, so I made dummies of each features,to get the numeric values.After cleaning my data, my final DataFrame contained 57 features (columns) and 1658098 (rows). Then I classified My target features which had a balanced of classes of 57% for class 1(Job Complete) and 20% for class 0(Job return)
+Mostly all the features are categorical, so I made dummies of each features,to get the numeric values.My dataframe becomes now 57 features (columns) and 1658098 (rows). Then I classified My target features which had a balanced of classes of 57% for class 1(Job Complete) and 20% for class 0(Job return)
 
-Then I decided to split my data set into two splits training data sets and test data set. As my datasets contain large number of features, it may gives high variance to the model so I decided to apply PCA(Principle Component Analysis ) to get the variance of the data and PCA also will give dimensional reduction. 
+Then I decided to split my data set into two splits training data sets and test data set. As my datasets contain large number of features, it may gives high variance to the model so I decided to apply PCA(Principle Component Analysis ) to get the variance of the data and PCA also use for dimensional reduction. 
 
 
 ## Model fitting and evaluate model:
@@ -64,7 +62,7 @@ First five principle components showing 85% accuracy score in logistic regressio
 
 ## Second Model
 
-Next I try to predict model for the return statement code which signifies the major return caused.
+Next I tried to predict model for the return statement code which signifies the major return caused.
 
 ---
 
